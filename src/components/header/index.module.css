@@ -139,19 +139,10 @@ header {
   padding: 10px;
   background: red;
   transition: 0.5s ease;
-  animation: modal 0.5s;
+  /* animation: modal 0.5s; */
   z-index: 2;
 }
 
-@keyframes modal {
-  0% {
-    top: 0;
-  }
-
-  100% {
-    top: 150px;
-  }
-}
 .modalBackground {
   height: 100%;
   width: 100%;
@@ -161,7 +152,7 @@ header {
   display: block;
   z-index: 1 !important;
   background-color: rgb(11, 10, 10);
-  filter: alpha(opacity=55);
+  filter: alpha(opacity=75);
   -khtml-opacity: 0.55;
   -moz-opacity: 0.55;
   opacity: 0.55;

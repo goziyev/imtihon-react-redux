@@ -14,7 +14,7 @@ function MyModal({ isOpen, setIsOpen }) {
   };
   return isOpen ? (
     <>
-      <div className={styles.modal}>
+      <div className={styles.modal} data-aos="flip-up">
         <iframe
           style={divStyle}
           src="https://giphy.com/embed/14106sUJFvH5Sw"
@@ -77,12 +77,12 @@ function Header() {
                 </div>
               </div>
             </div>
-            <div className={styles.header__logo}>
+            <div data-aos="fade-up" className={styles.header__logo}>
               <Link to="/">
                 <img src={logo} />
               </Link>
             </div>
-            <div className={styles.links}>
+            <div data-aos="fade-up" className={styles.links}>
               <ul>
                 <li>
                   <Link to="/">Home</Link>

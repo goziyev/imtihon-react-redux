@@ -10,6 +10,8 @@ import Products from "./pages/products";
 import ProductPage from "./pages/product";
 import Checkout from "./components/chekout";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const navigate = useNavigate();
@@ -19,6 +21,7 @@ function App() {
     if (!localStorage.getItem("token") && location.pathname != "/register") {
       navigate("/login");
     }
+    AOS.init({ duration: 700 });
   }, []);
 
   function ProtectedRoute({
@@ -31,6 +34,10 @@ function App() {
     }
     return children;
   }
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 
   return (
     <>

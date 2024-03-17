@@ -5,7 +5,12 @@ function HomeComponent() {
   return (
     <div className={styles.componentBackground}>
       <div className={styles.container}>
-        <div className={styles.componentTitle}>
+        <div
+          className={styles.componentTitle}
+          data-aos="fade-right"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine"
+        >
           <h5>NEW PRODUCT</h5>
           <h2>XX99 Mark II Headphones</h2>
           <p>

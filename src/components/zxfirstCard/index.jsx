@@ -4,7 +4,7 @@ function ZxFristCard() {
   const navigate = useNavigate();
   return (
     <div className={styles.bigContainer}>
-      <div className={styles.container}>
+      <div data-aos="flip-left" className={styles.container}>
         <div className={styles.cardImg}>
           <img src="./zx9.png" alt="" />
         </div>
