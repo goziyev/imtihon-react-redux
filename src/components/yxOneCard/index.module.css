@@ -1,0 +1,59 @@
+.containerWrapper {
+  max-width: 1110px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.cardImg img {
+  width: 530px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.cardTexts {
+  background-color: #f1f1f1;
+  max-width: 540px;
+  width: 100%;
+  border-radius: 15px;
+  padding-top: 7%;
+  padding-left: 7%;
+  height: 320px;
+}
+
+.cardTexts h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.cardButton {
+  margin-top: 25px;
+  border: 2px solid black;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 15px 30px;
+  width: 180px;
+  transition: all 0.5s linear;
+  display: inline-block;
+}
+.cardButton:hover {
+  background-color: black;
+  color: white;
+}
+@media screen and (max-width: 630px) {
+  .containerWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

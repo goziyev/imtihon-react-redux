@@ -1,0 +1,141 @@
+.componentBackground {
+  background-color: #131313;
+  width: 100%;
+  padding-bottom: 40px;
+}
+.container {
+  margin: 0px auto;
+  background-image: url(../../assets/Headphones.png);
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: 90%;
+  max-width: 1100px;
+  width: 100%;
+  padding: 100px 30px;
+}
+.componentTitle h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.componentTitle h2 {
+  color: white;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 24px;
+  width: 50%;
+}
+.componentTitle p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  width: 40%;
+  opacity: 0.7;
+}
+.componentTitle Link {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: white;
+  padding: 15px 30px;
+}
+.componentTitle button {
+  padding: 15px 30px;
+  background-color: #d87d4a;
+  margin-top: 40px;
+  color: white;
+  transition: all 0.5s;
+}
+.componentTitle button:hover {
+  background-color: #fbaf85;
+}
+
+@media screen and (max-width: 1023px) {
+  .componentTitle h5 {
+    width: 70%;
+  }
+  .componentTitle h2 {
+    width: 70%;
+  }
+  /* .componentTitle p {
+        width: 100%;
+        text-align: center;
+      } */
+}
+
+@media screen and (max-width: 900px) {
+  .componentTitle {
+    padding: 0px 40px;
+    text-align: center;
+  }
+  .componentTitle h5 {
+    font-size: 15px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .componentTitle h2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: normal;
+  }
+  .componentTitle p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .componentBackground {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    padding: 100px 40px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .componentTitle h5 {
+    font-size: 15px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .componentTitle h2 {
+    font-size: 28px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: normal;
+  }
+  .componentTitle p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .container {
+    background-position: center;
+  }
+}

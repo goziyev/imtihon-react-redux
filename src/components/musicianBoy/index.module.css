@@ -1,0 +1,153 @@
+.wrapper {
+  max-width: 1110px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 30px;
+}
+.musicBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: 160px;
+  flex-wrap: wrap;
+  height: 588px;
+}
+.musicInfo {
+  width: 445px;
+}
+.musicInfo h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.4285714626312256px;
+  text-align: left;
+}
+.musicInfo span {
+  color: #d87d4a;
+}
+.musicInfo p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  opacity: 0.5;
+  margin-top: 32px;
+}
+.musicImage {
+  height: 588px;
+  width: 540px;
+  background-image: url("../../../public/bring.png");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+@media screen and (max-width: 1045px) {
+  .musicBlock {
+    flex-wrap: nowrap;
+  }
+  .musicInfo {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 998px) {
+  .wrapper {
+    padding: 0px 15px;
+  }
+  .musicBlock {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    max-width: 880px;
+    margin-left: -200px;
+    width: 100%;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .musicInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 880px;
+  }
+  .musicInfo h2 {
+    margin-top: 50px;
+    width: 600px;
+    text-align: center;
+  }
+  .musicInfo p {
+    width: 600px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .musicBlock {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .musicImage {
+    background-image: url("../../../public/bringtablet.png");
+    background-size: contain;
+    height: 300px;
+    width: 689px;
+  }
+  .musicInfo {
+    width: 573px;
+    text-align: center;
+  }
+  .musicInfo h2 {
+    text-align: center;
+    width: 400px;
+  }
+  .musicInfo p {
+    text-align: center;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .musicBlock {
+    max-width: 327px;
+    width: 100%;
+    height: 698px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .musicImage {
+    background-image: url("../../../public/bringPhone.png");
+  }
+  .musicInfo {
+    width: 327px;
+  }
+  .musicInfo h2 {
+    width: 327px;
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .musicInfo p {
+    max-width: 327px;
+    width: 100%;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .musicImage {
+    max-width: 310px;
+    width: 100%;
+  }
+}

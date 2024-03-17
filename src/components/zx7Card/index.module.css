@@ -1,0 +1,52 @@
+.containerWrapper {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 50px;
+}
+.background {
+  background-image: url("./Bitmapa.png");
+  background-size: cover;
+  padding: 20px;
+  border-radius: 15px;
+  height: 500px;
+  padding-left: 62px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  background-position: center;
+}
+.cardTitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.cardButton {
+  border: 2px solid black;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 15px 30px;
+  width: 170px;
+  transition: all 0.5s linear;
+}
+.cardButton:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 670px) {
+  .background {
+    padding-left: 20px;
+  }
+}

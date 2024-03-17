@@ -1,0 +1,173 @@
+/* index.module.css */
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 15px;
+}
+
+.cardImg {
+  width: 540px;
+  height: 560px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 241, 241);
+}
+
+.cardText {
+  width: 445px;
+}
+
+.cardText h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-align: left;
+  color: #d87d4a;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.cardText h2 {
+  max-width: 400px;
+  width: 80%;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.4285714626312256px;
+  text-align: left;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.cardText .description {
+  max-width: 445px;
+  width: 80%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: black;
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+
+.cardWrapper button {
+  cursor: pointer;
+  background: rgb(216, 125, 74);
+  padding: 15px 30px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.5s ease;
+}
+.cardWrapper button:hover {
+  opacity: 0.8;
+}
+.cardImg img {
+  width: 295.84px;
+  height: 385px;
+}
+
+.flexDirection {
+  flex-direction: reverse;
+}
+
+@media screen and (max-width: 998px) {
+  .cardWrapper {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .cardWrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .cardImg {
+    width: 100%;
+  }
+  .cardImg img {
+    width: 100%;
+  }
+  .cardText {
+    text-align: center;
+    width: 100%;
+  }
+  .cardText p {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cardText h4 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cardText h2 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.wrapper {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.storeCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storeCard p {
+  padding: 10px;
+  width: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  transition: all 0.5s linear;
+  background-color: #f1f1f1;
+}
+.storeCard p:nth-child(2):hover {
+  cursor: unset;
+  color: black;
+  background-color: #f1f1f1;
+}
+.storeCard p:hover {
+  color: white;
+  background-color: #d87d4a;
+}
+
+.cardPrice {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 25px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: left;
+}
+@media screen and (max-width: 780px) {
+  .wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}
