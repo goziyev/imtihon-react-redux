@@ -208,3 +208,7 @@ label {
     flex-direction: column;
   }
 }
+
+.modal-open {
+  overflow: hidden;
+}

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import style from "./index.module.css";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
+import StoreModal from "../storeModal";
 
 function Checkout() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Checkout() {
   const seventh = useRef("");
   const eigth = useRef("");
   const ninith = useRef("");
-
+  const [modal, setModal] = useState(false);
   function goBack() {
     navigate(-1);
   }
@@ -78,6 +79,14 @@ function Checkout() {
     }
     return true;
   }
+
+  useEffect(() => {
+    if (modal) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  }, [modal]);
   const divStyle = {
     pointerEvents: "none",
     "&:hover": {
@@ -103,280 +112,281 @@ function Checkout() {
 
   function handleCheck(e) {
     e.preventDefault();
-    let a = validate();
-    if (a) {
-      alert("validatsiyadan o'tdi");
-    }
+    // let a = validate();
+    setModal(!modal);
   }
 
   return (
-    <div className={style.background}>
-      <div className={style.container}>
-        <div className={style.goBack}>
-          <p onClick={goBack}>Go Back</p>
-        </div>
-        <div className={style.wrapper}>
-          <div className={style.formWrapper}>
-            <h3 className={style.formTitle}>CHECKOUT</h3>
-            <p className={style.details}>BILLING DETAILS</p>
-            <form className={style.form}>
-              <div className={style.formInput}>
-                <label
-                  className="form-control "
-                  style={{ maxWidth: "290px", width: "100%" }}
-                >
-                  <div className="label">
-                    <span className="label-text">Name</span>
-                  </div>
-                  <input
-                    ref={first}
-                    type="text"
-                    placeholder="Alexai Ward"
-                    className="input input-bordered"
+    <>
+      <div className={style.background}>
+        <div className={style.container}>
+          <div className={style.goBack}>
+            <p onClick={goBack}>Go Back</p>
+          </div>
+          <div className={style.wrapper}>
+            <div className={style.formWrapper}>
+              <h3 className={style.formTitle}>CHECKOUT</h3>
+              <p className={style.details}>BILLING DETAILS</p>
+              <form className={style.form}>
+                <div className={style.formInput}>
+                  <label
+                    className="form-control "
                     style={{ maxWidth: "290px", width: "100%" }}
-                    required
-                  />
-                </label>
+                  >
+                    <div className="label">
+                      <span className="label-text">Name</span>
+                    </div>
+                    <input
+                      ref={first}
+                      type="text"
+                      placeholder="Alexai Ward"
+                      className="input input-bordered"
+                      style={{ maxWidth: "290px", width: "100%" }}
+                      required
+                    />
+                  </label>
 
-                <label
-                  className="form-control "
-                  style={{ maxWidth: "290px", width: "100%" }}
-                >
-                  <div className="label">
-                    <span className="label-text">Email Address</span>
-                  </div>
-                  <input
-                    ref={second}
-                    type="email"
-                    placeholder="New York"
-                    className="input input-bordered"
+                  <label
+                    className="form-control "
                     style={{ maxWidth: "290px", width: "100%" }}
-                    required
-                  />
-                </label>
-              </div>
-              <label
-                className="form-control"
-                style={{ maxWidth: "290px", width: "100%" }}
-              >
-                <div
-                  className="label"
-                  style={{ maxWidth: "290px", width: "100%" }}
-                >
-                  <span className="label-text">Phone Number</span>
+                  >
+                    <div className="label">
+                      <span className="label-text">Email Address</span>
+                    </div>
+                    <input
+                      ref={second}
+                      type="email"
+                      placeholder="New York"
+                      className="input input-bordered"
+                      style={{ maxWidth: "290px", width: "100%" }}
+                      required
+                    />
+                  </label>
                 </div>
-                <input
-                  ref={third}
-                  type="number"
-                  placeholder="+1 202-555-0136"
-                  className="input input-bordered "
-                  style={{ maxWidth: "290px", width: "100%" }}
-                  required
-                />
-              </label>
-            </form>
-            <p className={style.details}>SHIPPING INFO</p>
-            <form className={style.form}>
-              <label className="form-control  mb-2" style={{ width: "100%" }}>
-                <div className="label">
-                  <span className="label-text">Address</span>
-                </div>
-                <input
-                  ref={fourth}
-                  type="text"
-                  placeholder="1137 Williams Avenue"
-                  className="input input-bordered mb-5"
-                  style={{ width: "100%" }}
-                  required
-                />
-              </label>
-              <div className={style.formInput}>
                 <label
                   className="form-control"
                   style={{ maxWidth: "290px", width: "100%" }}
                 >
-                  <div className="label">
-                    <span className="label-text">ZIP Code</span>
+                  <div
+                    className="label"
+                    style={{ maxWidth: "290px", width: "100%" }}
+                  >
+                    <span className="label-text">Phone Number</span>
                   </div>
                   <input
-                    ref={fiveth}
+                    ref={third}
                     type="number"
-                    placeholder="10001"
-                    className="input input-bordered"
+                    placeholder="+1 202-555-0136"
+                    className="input input-bordered "
                     style={{ maxWidth: "290px", width: "100%" }}
                     required
                   />
                 </label>
+              </form>
+              <p className={style.details}>SHIPPING INFO</p>
+              <form className={style.form}>
+                <label className="form-control  mb-2" style={{ width: "100%" }}>
+                  <div className="label">
+                    <span className="label-text">Address</span>
+                  </div>
+                  <input
+                    ref={fourth}
+                    type="text"
+                    placeholder="1137 Williams Avenue"
+                    className="input input-bordered mb-5"
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </label>
+                <div className={style.formInput}>
+                  <label
+                    className="form-control"
+                    style={{ maxWidth: "290px", width: "100%" }}
+                  >
+                    <div className="label">
+                      <span className="label-text">ZIP Code</span>
+                    </div>
+                    <input
+                      ref={fiveth}
+                      type="number"
+                      placeholder="10001"
+                      className="input input-bordered"
+                      style={{ maxWidth: "290px", width: "100%" }}
+                      required
+                    />
+                  </label>
 
+                  <label
+                    className="form-control "
+                    style={{ maxWidth: "290px", width: "100%" }}
+                  >
+                    <div className="label">
+                      <span className="label-text">City</span>
+                    </div>
+                    <input
+                      ref={sixth}
+                      type="text"
+                      placeholder="New York"
+                      className="input input-bordered"
+                      style={{ maxWidth: "290px", width: "100%" }}
+                      required
+                    />
+                  </label>
+                </div>
+                <label className="form-control ">
+                  <div className="label">
+                    <span className="label-text">Country</span>
+                  </div>
+                  <input
+                    ref={seventh}
+                    type="text"
+                    placeholder="United States"
+                    className="input input-bordered "
+                    style={{ maxWidth: "290px", width: "100%" }}
+                    required
+                  />
+                </label>
+              </form>
+
+              <p className={`${style.details} mb-4`}>PAYMENT DETAILS</p>
+              <div className={style.formInput1}>
+                <p
+                  className={style.payment}
+                  style={{ maxWidth: "290px", width: "100%" }}
+                >
+                  Payment Method
+                </p>
+                <div className="radio-container  w-2/4 flex flex-col  gap-4">
+                  <label
+                    className="radio-label input flex gap-4 items-center input-bordered"
+                    style={{ maxWidth: "290px", width: "100%" }}
+                  >
+                    <input
+                      type="radio"
+                      name="radio-7"
+                      className="radio radio-info"
+                      defaultChecked
+                    />
+                    e-Money
+                  </label>
+                  <label
+                    className="radio-label input flex gap-4 items-center input-bordered  "
+                    style={{ maxWidth: "290px", width: "100%" }}
+                  >
+                    <input
+                      type="radio"
+                      name="radio-7"
+                      className="radio radio-info"
+                      defaultChecked
+                    />
+                    Cash on Delivery
+                  </label>
+                </div>
+              </div>
+              <div className={style.formInput}>
                 <label
-                  className="form-control "
+                  className="form-control mt-5 "
                   style={{ maxWidth: "290px", width: "100%" }}
                 >
                   <div className="label">
-                    <span className="label-text">City</span>
+                    <span className="label-text">e-Money Number</span>
                   </div>
                   <input
-                    ref={sixth}
+                    ref={eigth}
+                    type="number"
+                    placeholder="238521993"
+                    className="input input-bordered "
+                    style={{ maxWidth: "290px", width: "100%" }}
+                    required
+                  />
+                </label>
+
+                <label
+                  className="form-control mt-5 "
+                  style={{ maxWidth: "290px", width: "100%" }}
+                >
+                  <div className="label">
+                    <span className="label-text">e-Money PIN</span>
+                  </div>
+                  <input
+                    ref={ninith}
                     type="text"
-                    placeholder="New York"
-                    className="input input-bordered"
+                    placeholder="6891"
+                    className="input input-bordered w-5/6"
                     style={{ maxWidth: "290px", width: "100%" }}
                     required
                   />
                 </label>
               </div>
-              <label className="form-control ">
-                <div className="label">
-                  <span className="label-text">Country</span>
-                </div>
-                <input
-                  ref={seventh}
-                  type="text"
-                  placeholder="United States"
-                  className="input input-bordered "
-                  style={{ maxWidth: "290px", width: "100%" }}
-                  required
-                />
-              </label>
-            </form>
-
-            <p className={`${style.details} mb-4`}>PAYMENT DETAILS</p>
-            <div className={style.formInput1}>
-              <p
-                className={style.payment}
-                style={{ maxWidth: "290px", width: "100%" }}
-              >
-                Payment Method
-              </p>
-              <div className="radio-container  w-2/4 flex flex-col  gap-4">
-                <label
-                  className="radio-label input flex gap-4 items-center input-bordered"
-                  style={{ maxWidth: "290px", width: "100%" }}
-                >
-                  <input
-                    type="radio"
-                    name="radio-7"
-                    className="radio radio-info"
-                    defaultChecked
-                  />
-                  e-Money
-                </label>
-                <label
-                  className="radio-label input flex gap-4 items-center input-bordered  "
-                  style={{ maxWidth: "290px", width: "100%" }}
-                >
-                  <input
-                    type="radio"
-                    name="radio-7"
-                    className="radio radio-info"
-                    defaultChecked
-                  />
-                  Cash on Delivery
-                </label>
-              </div>
             </div>
-            <div className={style.formInput}>
-              <label
-                className="form-control mt-5 "
-                style={{ maxWidth: "290px", width: "100%" }}
-              >
-                <div className="label">
-                  <span className="label-text">e-Money Number</span>
-                </div>
-                <input
-                  ref={eigth}
-                  type="number"
-                  placeholder="238521993"
-                  className="input input-bordered "
-                  style={{ maxWidth: "290px", width: "100%" }}
-                  required
-                />
-              </label>
-
-              <label
-                className="form-control mt-5 "
-                style={{ maxWidth: "290px", width: "100%" }}
-              >
-                <div className="label">
-                  <span className="label-text">e-Money PIN</span>
-                </div>
-                <input
-                  ref={ninith}
-                  type="text"
-                  placeholder="6891"
-                  className="input input-bordered w-5/6"
-                  style={{ maxWidth: "290px", width: "100%" }}
-                  required
-                />
-              </label>
-            </div>
-          </div>
-          <div className={style.summary}>
-            <h3 className={style.summaryTitle}>Summary</h3>
-            <div className={style.summaryCardsWrapper}>
-              {data.length ? (
-                data.map((el, index) => {
-                  return (
-                    <div key={index} className={style.summaryCard}>
-                      <div className={style.summaryWrap}>
-                        <div className={style.summaryImg}>
-                          <img src={el.image} alt="Foto" />
+            <div className={style.summary}>
+              <h3 className={style.summaryTitle}>Summary</h3>
+              <div className={style.summaryCardsWrapper}>
+                {data.length ? (
+                  data.map((el, index) => {
+                    return (
+                      <div key={index} className={style.summaryCard}>
+                        <div className={style.summaryWrap}>
+                          <div className={style.summaryImg}>
+                            <img src={el.image} alt="Foto" />
+                          </div>
+                          <div className={style.summaryText}>
+                            <p className={style.summaryCardTitle}>{el.name}</p>
+                            <p className={style.summaryPrice}>${el.price}</p>
+                          </div>
                         </div>
-                        <div className={style.summaryText}>
-                          <p className={style.summaryCardTitle}>{el.name}</p>
-                          <p className={style.summaryPrice}>${el.price}</p>
-                        </div>
+                        <p className={style.summarySum}>x{el.count}</p>
                       </div>
-                      <p className={style.summarySum}>x{el.count}</p>
-                    </div>
-                  );
-                })
-              ) : (
+                    );
+                  })
+                ) : (
+                  <>
+                    <p>You have no products </p>
+                    <iframe
+                      src="https://giphy.com/embed/Phna8ImVFWEqxPUIfk"
+                      width="250"
+                      height="250"
+                      style={divStyle}
+                    ></iframe>
+                  </>
+                )}
+              </div>
+              <br />
+              <br />
+              <br />
+              {data.length ? (
                 <>
-                  <p>You have no products </p>
-                  <iframe
-                    src="https://giphy.com/embed/Phna8ImVFWEqxPUIfk"
-                    width="250"
-                    height="250"
-                    style={divStyle}
-                  ></iframe>
+                  <div className={style.texts}>
+                    <h3>TOTAL</h3>
+                    <p>{formattedTotal}</p>
+                  </div>
+                  <div className={style.texts}>
+                    <h3>SHIPPING</h3>
+                    <p>$55</p>
+                  </div>
+                  <div className={style.texts}>
+                    <h3>VAT (INCLUDED) </h3>
+                    <p>$1079</p>
+                  </div>
+                  <div className={style.texts}>
+                    <h3>GRAND TOTAL</h3>
+                    <p style={{ color: "#D87D4A" }}>{formattedTotal}</p>
+                  </div>
+                  <button
+                    onClick={handleCheck}
+                    id="checkButton"
+                    className={style.summaryButton}
+                  >
+                    CONTINUE & PAY
+                  </button>
                 </>
-              )}
+              ) : null}
             </div>
-            <br />
-            <br />
-            <br />
-            {data.length ? (
-              <>
-                <div className={style.texts}>
-                  <h3>TOTAL</h3>
-                  <p>{formattedTotal}</p>
-                </div>
-                <div className={style.texts}>
-                  <h3>SHIPPING</h3>
-                  <p>$55</p>
-                </div>
-                <div className={style.texts}>
-                  <h3>VAT (INCLUDED) </h3>
-                  <p>$1079</p>
-                </div>
-                <div className={style.texts}>
-                  <h3>GRAND TOTAL</h3>
-                  <p style={{ color: "#D87D4A" }}>{formattedTotal}</p>
-                </div>
-                <button
-                  onClick={handleCheck}
-                  id="checkButton"
-                  className={style.summaryButton}
-                >
-                  CONTINUE & PAY
-                </button>
-              </>
-            ) : null}
           </div>
         </div>
       </div>
-    </div>
+      {modal && <StoreModal setModal={setModal} total={formattedTotal} />}
+    </>
   );
 }
 

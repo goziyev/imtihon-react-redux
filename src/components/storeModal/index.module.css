@@ -1,0 +1,207 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+}
+
+.modalMain {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 540px;
+  padding: 40px;
+  height: auto;
+  border-radius: 15px;
+}
+.modalTitle {
+  margin-top: 33px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1.3428571939468384px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.modalTitle + p {
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.summaryCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #dedede;
+}
+.summaryWrap {
+  display: flex;
+  gap: 15px;
+}
+.summaryImg {
+  width: 70px;
+  height: 70px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summaryImg img {
+  width: 40px;
+  object-fit: cover;
+}
+
+.summaryText {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+.summaryCardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.summaryPrice {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.summarySum {
+  opacity: 0.5;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+.texts {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.texts h3 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  opacity: 0.5;
+}
+
+.texts p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.summaryButton {
+  background-color: #d87d4a;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 15px 50px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.modalCardWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.grandCard {
+  background-color: black;
+  color: white;
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 10px;
+  padding: 31px 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.grandCard p {
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.grandCard h3 {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.modalCard {
+  width: 260px;
+  padding: 24px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.modalAndText {
+  margin-top: 4px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.button {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: #d87d4a;
+  padding: 15px;
+  width: 100%;
+  display: block;
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 514px) {
+  .modalCardWrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .modalCard {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .grandCard {
+    width: 100%;
+    border-radius: 10px;
+  }
+}

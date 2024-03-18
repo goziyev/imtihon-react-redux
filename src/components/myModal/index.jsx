@@ -101,7 +101,7 @@ function MyModal({ isOpen, setIsOpen }) {
               <p>{formattedTotal}</p>
             </div>
             <Link to="/checkout" className={styles.modalCheskout}>
-              CHESKOUT
+              CHECKOUT
             </Link>
           </div>
         ) : (
