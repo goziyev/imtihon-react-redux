@@ -5,7 +5,8 @@ import earphones from "../../assets/earphone.png";
 import ProductCard from "../productCard";
 function ProductSmallCard() {
   return (
-    <div className={styles.cardsWrapper}>
+    <div className={styles.cardsWrapper}  data-aos="fade-up"
+    data-aos-duration="1500">
       <ProductCard img={heardphones} name={"HEADPHONES"} />
       <ProductCard img={speakers} name={"SPEAKERS"} />
       <ProductCard img={earphones} name={"EARPHONES"} />

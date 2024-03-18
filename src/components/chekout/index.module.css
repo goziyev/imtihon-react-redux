@@ -1,344 +1,210 @@
-.checkoutWrapper {
-    background: rgb(242, 242, 242);
-  }
-  
-  form {
-    width: 730px;
-    padding: 54px 48px;
-    border-radius: 8px;
-    background: rgb(255, 255, 255);
-  }
-  
-  form h2 {
-    color: rgb(0, 0, 0);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 1.14px;
-    text-align: left;
-    text-transform: uppercase;
-    margin-bottom: 41px;
-  }
-  
-  form p {
-    color: rgb(216, 125, 74);
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0.93px;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  
-  .nameEmail {
-    display: flex;
-    gap: 16px;
-  }
-  
-  .nameEmail label {
-    width: 50%;
-  }
-  
-  form label p {
-    margin-top: 24px;
-    margin-bottom: 9px;
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: -0.21px;
-    text-align: left;
-  }
-  
-  form input {
-    box-sizing: border-box;
-    border: 1px solid rgb(207, 207, 207);
-    border-radius: 8px;
-    width: 100%;
-    padding: 18px 24px;
-    background: rgb(255, 255, 255);
-  }
-  
-  .shipping {
-    margin-top: 53px;
-  }
-  
-  .codeCity {
-    display: flex;
-    gap: 16px;
-  }
-  
-  .codeCity label {
-    width: 50%;
-  }
-  
-  .payments > p {
-    margin-top: 61px;
-  }
-  
-  .money {
-    display: flex;
-  }
-  
-  .card {
-    display: flex;
-  }
-  
-  input[type="radio"] {
-    width: 20px;
-  }
-  
-  .method {
-    width: 76%;
-    justify-content: space-between;
-    display: flex;
-  }
-  
-  .method p {
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: -0.21px;
-    text-align: left;
-  }
-  
-  .method h3 {
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: -0.25px;
-    text-align: left;
-  }
-  
-  .money {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .card {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .paymentOrder {
-    display: flex;
-    width: 100%;
-    gap: 16px;
-  }
-  
-  .paymentOrder label {
-    width: 50%;
-  }
-  
-  .details {
-    width: 350px;
-    padding: 32px 33px;
-    border-radius: 8px;
-    background: rgb(255, 255, 255);
-  }
-  
-  .details h2 {
-    margin-bottom: 31px;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 1.29px;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  
-  .cardImg {
-    padding: 13px 14px;
-    border-radius: 8px;
-    background: rgb(241, 241, 241);
-  }
-  
-  .cardImg img {
-    width: 36px;
-    height: 40px;
-  }
-  
-  .imgCost {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-  
-  .card {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .card h3 {
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: left;
-  }
-  
-  .card p {
-    color: rgb(0, 0, 0);
-    opacity: 0.5;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: left;
-  }
-  
-  .card span {
-    color: rgb(0, 0, 0);
-    opacity: 0.5;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: right;
-  }
-  
-  .cardsSummary {
-    display: flex;
+.goBack {
+  max-width: 1070px;
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  padding-top: 25px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 1110px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  padding: 0px 15px;
+  gap: 30px;
+}
+.formWrapper {
+  max-width: 710px;
+  width: 100%;
+  padding: 54px 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.background {
+  background: #f1f1f1;
+}
+.summary {
+  border-radius: 10px;
+  background-color: white;
+  max-width: 350px;
+  width: 100%;
+  padding: 32px;
+  min-height: 400px;
+  height: 100%;
+}
+
+.formTitle {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1.1428571939468384px;
+  text-align: left;
+  margin-bottom: 41px;
+}
+
+.details {
+  font-family: Manrope;
+  font-size: 13px;
+  margin-top: 25px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.9285714030265808px;
+  text-align: left;
+  color: #d87d4a;
+}
+
+.formInput {
+  gap: 10px;
+  display: flex;
+}
+.formInput1 {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+
+.payment {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.2142857164144516px;
+  text-align: left;
+}
+label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.2142857164144516px;
+  text-align: left;
+}
+.wrapper {
+  margin-bottom: 100px;
+}
+
+.summaryTitle {
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: left;
+  margin-bottom: 31px;
+}
+
+.summaryCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summaryCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summaryWrap {
+  display: flex;
+  gap: 15px;
+}
+.summaryImg {
+  width: 70px;
+  height: 70px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summaryImg img {
+  width: 40px;
+  object-fit: cover;
+}
+
+.summaryText {
+  display: flex;
+  flex-direction: column;
+}
+.summaryCardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.summaryPrice {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.summarySum {
+  opacity: 0.5;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+.texts {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.texts h3 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  opacity: 0.5;
+}
+
+.texts p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.summaryButton {
+  background-color: #d87d4a;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 15px 50px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1045px) {
+  .wrapper {
     flex-direction: column;
-  }
-  
-  .info1 {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .info1 h4 {
-    color: rgb(0, 0, 0);
-    opacity: 0.5;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: left;
-  }
-  
-  .info1 span {
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: right;
-    text-transform: uppercase;
-  }
-  
-  .price {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .garondTotal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .garondTotal span {
-    color: rgb(216, 125, 74);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: right;
-    text-transform: uppercase;
-  }
-  
-  .details button {
-    cursor: pointer;
-    border: none;
-    margin-top: 32px;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    background: rgb(216, 125, 74);
-  }
-  
-  .formWrapper {
-    padding: 50px;
-    margin: 0px auto;
-    align-items: start;
-    display: flex;
-    gap: 30px;
-    width: max-content;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
   }
-  
-  .modal img {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .modal h2 {
-    margin-top: 25px;
-    color: #000;
-    font-size: 24px;
-  }
-  
-  .modal p {
-    margin-top: 15px;
-    color: #000;
-    font-size: 18px;
-  }
-  
-  .modalInfo {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .cardInfo {
-    display: flex;
+}
+
+@media screen and (max-width: 707px) {
+  .formInput,
+  .formInput1 {
     flex-direction: column;
   }
-  
-  .cardModal {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .blackInfo {
-    color: #000;
-  }
-  
-  .blackInfo p {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  
-  .blackInfo h3 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
+}

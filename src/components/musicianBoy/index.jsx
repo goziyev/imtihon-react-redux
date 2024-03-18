@@ -4,8 +4,8 @@ function MusicanBoy() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.musicBlock}>
-        <div className={styles.musicImage}></div>
-        <div className={styles.musicInfo}>
+        <div className={styles.musicImage} data-aos="fade-up-left"></div>
+        <div className={styles.musicInfo} data-aos="fade-up-right">
           <h2>
             BRINGING YOU THE <span>BEST</span> AUDIO GEAR
           </h2>

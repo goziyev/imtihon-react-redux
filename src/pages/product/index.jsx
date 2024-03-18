@@ -3,6 +3,8 @@ import style from "./index.module.css";
 import { useEffect, useState } from "react";
 import ForOneProductCard from "../../components/forOneProductCard";
 import ProductSmallCard from "../../components/productCards";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductPage() {
   const navigate = useNavigate();
@@ -36,11 +38,11 @@ function ProductPage() {
         <ForOneProductCard el={data} page />
       </div>
       <div className={style.featuredWrapper}>
-        <div className={style.features}>
+        <div className={style.features} data-aos="fade-left">
           <h3>FEATURES</h3>
           <p>{data.features}</p>
         </div>
-        <div className={style.inTheBox}>
+        <div className={style.inTheBox} data-aos="fade-right">
           <h3>IN THE BOX</h3>
           {feature.map((el, index) => {
             return (
@@ -54,18 +56,38 @@ function ProductPage() {
       </div>
       <div className={style.imagesWrapper}>
         <div className={style.imagesFirst}>
-          <img src={gallery.first} alt={data.name} />
-          <img src={gallery.second} alt={data.name} />
+          <img
+            src={gallery.first}
+            alt={data.name}
+            data-aos="fade-down-right"
+            data-aos-duration="1400"
+          />
+          <img
+            src={gallery.second}
+            alt={data.name}
+            data-aos="fade-up"
+            data-aos-duration="1400"
+          />
         </div>
         <div className={style.imagesThird}>
-          <img src={gallery.third} alt={data.name} />
+          <img
+            src={gallery.third}
+            alt={data.name}
+            data-aos="fade-left"
+            data-aos-duration="1400"
+          />
         </div>
       </div>
       <h3 className={style.moreProductsTitle}>you may also like</h3>
       <div className={style.moreProducts}>
         {others.map((el, index) => {
           return (
-            <div className={style.moreCard} key={index}>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              className={style.moreCard}
+              key={index}
+            >
               <div className={style.moreCardImg}>
                 <img src={el.image} alt="" />
               </div>
@@ -80,7 +102,7 @@ function ProductPage() {
           );
         })}
       </div>
-      <ProductSmallCard/>
+      <ProductSmallCard />
     </div>
   );
 }

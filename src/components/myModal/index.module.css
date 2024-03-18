@@ -1,0 +1,183 @@
+.modal {
+  position: fixed;
+  top: 150px;
+  right: 250px;
+  max-width: 377px;
+  min-width: 300px;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 15px;
+  padding: 30px;
+  background: white;
+  transition: 0.5s ease;
+  /* animation: modal 0.5s; */
+  z-index: 1000;
+}
+
+.modalBackground {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  z-index: 1 !important;
+  background-color: rgb(11, 10, 10);
+  filter: alpha(opacity=75);
+  -khtml-opacity: 0.55;
+  -moz-opacity: 0.55;
+  opacity: 0.55;
+}
+
+.modalTitleText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.2857142686843872px;
+  text-align: left;
+}
+.modalTitleText p {
+  cursor: pointer;
+  font-size: 15px;
+  border-bottom: 2px solid rgb(96, 94, 94);
+  font-weight: 400;
+  opacity: 0.5;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.modalCard {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalImg {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.modalCardText {
+  display: flex;
+  flex-direction: column;
+}
+.modalCardText {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.modalCardText p {
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.storeCard {
+  display: flex;
+}
+.storeCard p {
+  padding: 15px 20px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.4s ease;
+}
+.storeCard p:hover {
+  background-color: chocolate;
+}
+
+.storeCard p:nth-child(2):hover {
+  cursor: unset;
+  background-color: #f1f1f1;
+}
+.storeCard p:nth-child(2) {
+  cursor: unset;
+  opacity: 1;
+  font-weight: 800;
+  font-size: 18px;
+  background-color: #f1f1f1;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modalFooter h3 {
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.modalFooter p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .modal {
+    top: 150px;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .modal {
+    top: 150px;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .modal {
+    top: 150px;
+    right: 5%;
+    width: 290px;
+  }
+  .storeCard p {
+    padding: 10px;
+  }
+}
+
+.modalCheskout {
+  display: block;
+  padding: 10px 50px;
+  background-color: #d87d4a;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 10px;
+  max-width: 313px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}

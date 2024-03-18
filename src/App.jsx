@@ -12,6 +12,7 @@ import Checkout from "./components/chekout";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useDispatch, useSelector } from "react-redux";
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ function App() {
       navigate("/login");
     }
     AOS.init({ duration: 700 });
+    setToken(localStorage.getItem("token"));
   }, []);
 
   function ProtectedRoute({
@@ -32,6 +34,7 @@ function App() {
     if (!isAuthentication) {
       navigate(redirectTo);
     }
+
     return children;
   }
   window.scrollTo({
@@ -45,7 +48,7 @@ function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1 }} // Adjust duration as needed
+        transition={{ duration: 1 }}
       >
         <Routes>
           <Route path="/register" element={<Register />}></Route>
@@ -82,7 +85,7 @@ function App() {
             }
           />
           <Route
-            path="/cheskout"
+            path="/checkout"
             element={
               <ProtectedRoute isAuthentication={token ? true : false}>
                 <Layout>

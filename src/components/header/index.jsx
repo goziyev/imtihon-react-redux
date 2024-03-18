@@ -4,35 +4,7 @@ import styles from "./index.module.css";
 import shape from "../../assets/shape.svg";
 import hamburger from "../../assets/hamburger.svg";
 import logo from "../../assets/logo.svg";
-
-function MyModal({ isOpen, setIsOpen }) {
-  const divStyle = {
-    pointerEvents: "none",
-    "&:hover": {
-      pointerEvents: "initial",
-    },
-  };
-  return isOpen ? (
-    <>
-      <div className={styles.modal} data-aos="flip-up">
-        <iframe
-          style={divStyle}
-          src="https://giphy.com/embed/14106sUJFvH5Sw"
-          width="350"
-          height="350"
-        ></iframe>
-      </div>
-      <div
-        onClick={() => {
-          setIsOpen(!isOpen);
-        }}
-        className={styles.modalBackground}
-      ></div>
-    </>
-  ) : (
-    ""
-  );
-}
+import MyModal from "../myModal";
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -77,12 +49,12 @@ function Header() {
                 </div>
               </div>
             </div>
-            <div data-aos="fade-up" className={styles.header__logo}>
+            <div className={styles.header__logo}>
               <Link to="/">
                 <img src={logo} />
               </Link>
             </div>
-            <div data-aos="fade-up" className={styles.links}>
+            <div className={styles.links}>
               <ul>
                 <li>
                   <Link to="/">Home</Link>

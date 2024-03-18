@@ -10,10 +10,10 @@ function CardProduct({ index, el, page }) {
       style={{ flexDirection: flexDirection }}
       className={`${styles.cardWrapper}`}
     >
-      <div className={styles.cardImg}>
+      <div className={styles.cardImg} data-aos="fade-left">
         <img src={el.image} alt={el.name} />
       </div>
-      <div className={styles.cardText}>
+      <div className={styles.cardText} data-aos="fade-right">
         <h4>NEW PRODUCT</h4>
         <h2>{el.name}</h2>
         <p>{el.description}</p>

@@ -25,7 +25,7 @@ function Products() {
       <PageName name={page} />
       <div className={styles.cardsWrapper}>
         {data.map((el, index) => {
-          return <CardProduct key={index} page={page} index={index} el={el} />;
+          return <CardProduct key={index} page={"ALL"} index={index} el={el} />;
         })}
       </div>
       <ProductSmallCard />

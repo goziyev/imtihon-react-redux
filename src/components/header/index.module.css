@@ -26,6 +26,9 @@ header {
   color: white;
   gap: 34px;
 }
+.basket {
+  cursor: pointer;
+}
 .footer__links ul {
   display: flex;
   list-style-type: none;
@@ -130,17 +133,17 @@ header {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 150px;
   right: 250px;
-  width: 377px;
-  height: 488px;
+  max-width: 377px;
+  min-height: 488px;
   border-radius: 15px;
-  padding: 10px;
-  background: red;
+  padding: 30px;
+  background: white;
   transition: 0.5s ease;
   /* animation: modal 0.5s; */
-  z-index: 2;
+  z-index: 1000;
 }
 
 .modalBackground {

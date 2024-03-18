@@ -75,8 +75,9 @@
   opacity: 0.8;
 }
 .cardImg img {
-  width: 295.84px;
+  /* width: 295.84px; */
   height: 385px;
+  object-fit: cover;
 }
 
 .flexDirection {
@@ -98,7 +99,7 @@
     width: 100%;
   }
   .cardImg img {
-    width: 100%;
+    object-fit: cover;
   }
   .cardText {
     text-align: center;
