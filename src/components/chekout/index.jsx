@@ -112,8 +112,9 @@ function Checkout() {
 
   function handleCheck(e) {
     e.preventDefault();
-    // let a = validate();
-    setModal(!modal);
+    if (validate()) {
+      setModal(!modal);
+    }
   }
 
   return (
