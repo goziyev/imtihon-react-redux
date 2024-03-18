@@ -93,8 +93,7 @@ function App() {
                 </Layout>
               </ProtectedRoute>
             }
-          />
-
+          /><></>
           <Route path="*" element={<Error></Error>} />
         </Routes>
       </motion.div>
